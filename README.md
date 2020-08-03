@@ -74,6 +74,7 @@ react
 redux
 
 redux-thunk
+    compose:增强函数
 
 axios
 
