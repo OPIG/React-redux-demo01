@@ -10,7 +10,7 @@ const TodoUI_noState =(props)=>{
         total: props.ListData.length,
       };
       
-    const headerData = 'this is header'
+    const headerData = 'this is header'   
 
 
     return (
@@ -45,7 +45,7 @@ const TodoUI_noState =(props)=>{
                                      onClick={()=>{props.DeleteMe(index)}}
                                      // why i can't just using onClick = {this.props.DeleteMe(index)}????
                                 >
-                                    Delete Me{index}
+                                    Delete Me
                                 </Button>
                             </List.Item>)
                     }

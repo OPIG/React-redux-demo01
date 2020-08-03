@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import store from './store'
-import axios from 'axios'
-import {ChangeInputValue,AddItem,DeleteItem, GetDataByAxios} from './store/ActionCreater'
+import {ChangeInputValue,AddItem,DeleteItem, GetListDataByAxios} from './store/ActionCreater'
 //import TodoUI from './TodoUI'
 import TodoUI from './TodoUI_noState' // 无状态组件
 
@@ -18,12 +17,15 @@ class Todo extends Component{
     }
     
     componentDidMount(){
-        axios.get("https://easy-mock.com/mock/5f16c3f094896b22a7fa795c/ReactDemo01/getList").then((res)=>{
-            const action = GetDataByAxios(res.data)
-            store.dispatch(action)
-        })
+        const action = GetListDataByAxios()
+        store.dispatch(action)
+
+        document.addEventListener('keydown',this.onkeydown)
     }
 
+    componentDidUpdate(){
+        // document.addEventListener('keydown',this.onkeydown)//放在这个生命周期函数中，首次加载页面点击回车不会有效果
+    }
     render(){
         
 
@@ -49,7 +51,14 @@ class Todo extends Component{
         store.dispatch(action)
     }
 
+    onkeydown=(e)=>{
+        if(e.keyCode ===13){
+            this.AddItem()
+            }
+        }
+
     AddItem(){
+        console.log("test")
         if(this.state.inputValue){
             const action =AddItem()
             store.dispatch(action)

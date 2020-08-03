@@ -73,6 +73,10 @@ react
 
 redux
 
+```
+import { createStore, applyMiddle, compose } from 'redux'
+```
+> createStore()中只能接受两个参数，所以需要用增强函数的方式
 redux-thunk
     compose:增强函数
 
