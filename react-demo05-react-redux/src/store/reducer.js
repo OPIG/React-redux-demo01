@@ -1,6 +1,7 @@
 import {INPUT_CHANGE,ADD_ITEM,DEL_ITEM} from './actionType'
 const defaultState={
-    inputValue:'enter something',
+    placeholder:'Enter something',
+    inputValue:'',
     listData:[
         "this is item1",
         "this is item2"
