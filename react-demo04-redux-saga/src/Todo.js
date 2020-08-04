@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import store from './store'
-import {ChangeInputValue,AddItem,DeleteItem, GetListDataByAxios,GetMyList} from './store/ActionCreater'
+import {ChangeInputValue,AddItem,DeleteItem,GetMyList} from './store/ActionCreater'
 //import TodoUI from './TodoUI'
 import TodoUI from './TodoUI_noState' // 无状态组件
 
@@ -17,7 +17,6 @@ class Todo extends Component{
     }
     
     componentDidMount(){
-       // const action = GetListDataByAxios()
        const action = GetMyList()
         store.dispatch(action)
 
