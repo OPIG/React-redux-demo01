@@ -12,9 +12,7 @@ export default (state=defaultState,action)=>{
         if(action.type===ADD_ITEM){
             const newState = JSON.parse(JSON.stringify(state))
             newState.ListData.push(newState.inputValue)
-            console.log(newState.inputValue)
             newState.inputValue=''
-            console.log(newState)
             return newState
         }
 

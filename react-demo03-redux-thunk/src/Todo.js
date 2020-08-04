@@ -58,7 +58,6 @@ class Todo extends Component{
         }
 
     AddItem(){
-        console.log("test")
         if(this.state.inputValue){
             const action =AddItem()
             store.dispatch(action)
@@ -69,7 +68,6 @@ class Todo extends Component{
     }
 
     DeleteMe(index){
-        console.log(index)
         const action=DeleteItem(index)
         store.dispatch(action)
     }

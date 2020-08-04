@@ -23,10 +23,10 @@ export const GetDataByAxios = (data)=>({
 
 export const GetListDataByAxios = ()=>{
     return (dispatch)=>{
-        (console.log('success'))
-        axios.get("https://easy-mock.com/mock/5f16c3f094896b22a7fa795c/ReactDemo01/getList").then((res)=>{
-            const action = GetDataByAxios(res.data)
-            dispatch(action)
-        })
+        axios.get("https://easy-mock.com/mock/5f16c3f094896b22a7fa795c/ReactDemo01/getList")
+            .then((res)=>{
+                const action = GetDataByAxios(res.data)
+                dispatch(action)
+            })
     }
 }

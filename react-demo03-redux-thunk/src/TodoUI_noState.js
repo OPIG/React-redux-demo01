@@ -7,7 +7,7 @@ const TodoUI_noState =(props)=>{
         showSizeChanger: true,
         showQuickJumper: true,
         pageSize: 3,
-        total: props.ListData.length,
+        total: props.ListData?props.ListData.length:0,
       };
       
     const headerData = 'this is header'   
