@@ -21,10 +21,10 @@ class App extends Component {
     return ( 
       <Router>
         <li><Link to="/">home page</Link></li>
-        <li><Link to={'/test/'+Math.floor(Math.random()*1000)}>sub page</Link></li>
+        <li><Link to={'/list/123'}>sub page</Link></li>
         {console.log(arguments)}
         <Route path='/' exact component={Home}></Route>
-        <Route path='/test/:id' component={Sub}></Route>
+        <Route path='/list/:id' component={Sub}></Route>
       </Router>
      )
   }
