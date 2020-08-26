@@ -6,12 +6,14 @@ class Todo extends Component {
         this.state={
             placeholder:'Enter something',
             inputValue:'',
-            listData:[]
+            listData:[],
+            count:0
         }
         this.InputChange = this.InputChange.bind(this)
         this.AddItem = this.AddItem.bind(this)
         this.DeleteItem = this.DeleteItem.bind(this)
         this.keyDown=this.keyDown.bind(this)
+        this.addOne = this.addOne.bind(this)
     }
     render() { 
         return ( 
@@ -41,6 +43,8 @@ class Todo extends Component {
                         })
                     }
                 </ul>
+                <span>{this.state.count}</span>
+                <button onClick={this.addOne}>add 1</button>
             </div>
          );
     }
@@ -72,6 +76,11 @@ class Todo extends Component {
         if(e.keyCode===13&&document.activeElement===this._inputItem){
             this._inputItem.value?this.AddItem():alert("input something")
         }
+    }
+
+    addOne(){
+       
+        this.setState({count:this.state.count+3})
     }
 }
 
