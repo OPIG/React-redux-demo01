@@ -30,7 +30,7 @@ function CountWithHook2(){
         return ()=>{
             console.log('你点击了按钮')
         }
-    },[])
+    },[age])
     return (
         <div>
             {/* <p>Name: {name}</p>

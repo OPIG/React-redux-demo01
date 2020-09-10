@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import CountWithComponent from './CountWithComponent';
-import CountWithHook2 from './CountWithHook2';
+import ReducerDemo from './ReducerDemo';
 
 ReactDOM.render(
-    <CountWithHook2 />,
+    <ReducerDemo />,
   document.getElementById('root')
 );
